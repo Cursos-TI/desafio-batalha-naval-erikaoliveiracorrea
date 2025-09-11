@@ -12,19 +12,35 @@ int main()
     int casaDoNavio = 3;
 
     // linhas Horizontal
-    int linhaHorizontal = 2;  // linha 3 índice 2
-    int colunaHorizontal = 0; // começa na coluna A índice 0
+    int linhaHorizontal = 8;  // linha 9 índice 8
+    int colunaHorizontal = 1; // coluna B índice 1
     for (int i = 0; i < casaDoNavio; i++)
     {
         tabuleiro[linhaHorizontal][colunaHorizontal + i] = 3;
     }
 
-    // linhas vertiacal 5, 6 e 7 ===
+    // linhas vertiacal
     int linhaVertical = 4;  // linha 5 índice 4
     int colunaVertical = 2; // começa na coluna C índice 2
     for (int i = 0; i < casaDoNavio; i++)
     {
         tabuleiro[linhaVertical + i][colunaVertical] = 3;
+    }
+
+    // diagonal
+    int linhaDiag1 = 0;  // linha 1 índice 0
+    int colunaDiag1 = 0; // coluna A índice 0
+    for (int i = 0; i < casaDoNavio; i++)
+    {
+        tabuleiro[linhaDiag1 + i][colunaDiag1 + i] = 3;
+    }
+
+    // diagonal
+    int linhaDiag2 = 0;  // linha 1 índice 0
+    int colunaDiag2 = 9; // coluna J índice 9
+    for (int i = 0; i < casaDoNavio; i++)
+    {
+        tabuleiro[linhaDiag2 + i][colunaDiag2 - i] = 3;
     }
 
     printf("TABULEIRO BATALHA NAVAL\n\n");
